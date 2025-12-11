@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <style>
+      #loading,
+      #results {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <form action="" id="loan-form">
+              <div class="form-group pb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">&#8377;</div>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="Loan Amount"
+                    id="loan_amount"
+                    class="form-control" />
+                </div>
+              </div>
+              <div class="form-group pb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">%</div>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="Intrest"
+                    id="intrest"
+                    class="form-control" />
+                </div>
+              </div>
+              <div class="form-group pb-3">
+                <input
+                  type="number"
+                  placeholder="Tenure"
+                  id="years"
+                  class="form-control" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  class="btn btn-dark btn-block form-control"
+                  value="Calculate" />
+              </div>
+            </form>
+            <!-- Loader, Loading Gif -->
+            <!-- Loader, Loading Gif -->
+            <div id="loading" class="text-center py-4">
+              <img
+                src="/img/loading.gif"
+                class="img-fluid d-block mx-auto"
+                style="width: 100%"
+                height="100%"
+                alt="" />
+            </div>
+
+            <!-- Results -->
+
+            <div id="results" class="pt-4">
+              <h5>Results</h5>
+              <div class="form-group pb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Monthly Payment</div>
+                  </div>
+                  <input
+                    type="number"
+                    id="monthly_payment"
+                    class="form-control"
+                    disabled />
+                </div>
+              </div>
+              <div class="form-group pb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Total Amount</div>
+                  </div>
+                  <input
+                    type="number"
+                    id="total_amount"
+                    class="form-control"
+                    disabled />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Total Intrest</div>
+                  </div>
+                  <input
+                    type="number"
+                    id="total_intrest"
+                    class="form-control"
+                    disabled />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
